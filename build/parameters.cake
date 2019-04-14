@@ -32,7 +32,7 @@ public class BuildParameters
         return new BuildParameters {
             Target = context.Argument("target", "Build"),
             Configuration = context.Argument("configuration", "Release"),
-            SkipCodeCoverage = context.Argument<bool>("SkipCodeCoverage", false),
+            SkipCodeCoverage = context.Argument<bool>("SkipCodeCoverage", true),
             UploadCoverageReport = context.Argument<bool>("UploadCoverageReport", true),
             IsLocalBuild = buildSystem.IsLocalBuild,
             IsMaster = StringComparer.OrdinalIgnoreCase.Equals("master", buildSystem.AppVeyor.Environment.Repository.Branch),
