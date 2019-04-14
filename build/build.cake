@@ -81,7 +81,7 @@ Task("Run-Tests")
         NoBuild = true,
         NoRestore = true,
         Configuration = parameters.Configuration,
-        ArgumentCustomization = args=>args.Append("-- RunConfiguration.NoAutoReporters=true")
+        ArgumentCustomization = args=>args.Append(" -- RunConfiguration.NoAutoReporters=true")
     };
 
     if(parameters.SkipCodeCoverage == false)
