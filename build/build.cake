@@ -80,8 +80,8 @@ Task("Run-Tests")
         Framework = parameters.TargetFramework,
         NoBuild = true,
         NoRestore = true,
-        Configuration = parameters.Configuration
-        ArgumentCustomization = args=>args.Append("-- RunConfiguration.NoAutoReporters=true,")
+        Configuration = parameters.Configuration,
+        ArgumentCustomization = args=>args.Append("-- RunConfiguration.NoAutoReporters=true")
     };
 
     if(parameters.SkipCodeCoverage == false)
